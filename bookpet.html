@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Pet - Pet2Family</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cinzel:wght@600&family=Dancing+Script:wght@400..700&family=Orbitron&family=Pacifico&family=Rubik+Broken+Fax&family=Rubik+Glitch&family=Smooch&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="css/bookpet.css">
+</head>
+<body>
+    <div id="messageBox" class="message-box hidden">
+        <p>Your request has been submitted successfully. We will contact you soon!</p>
+        <button onclick="redirectToIndex()">OK</button>
+    </div>
+    <div class="chat-button" onclick="toggleChat()">
+        <i class="fas fa-comment" style="color: #ffffff;"></i>
+      </div>
+      <div id="chat-box" class="chat-box hidden">
+        Coming Soon!
+      </div>
+      
+      <a href="index.html" class="slider-button"><i class="fas fa-home" style="color: #ffffff;"></i></a>
+    <audio id="pawSound1">
+      <source src="sound/barkkk.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="pawSound2">
+      <source src="sound/cat.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="pawSound3">
+      <source src="sound/bird.wav" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    
+    <div class="navbar" style="font-size: 2em;">
+      <button onclick="playRandomSound()"><img src="https://em-content.zobj.net/source/softbank/145/paw-prints_1f43e.png" alt="🐾" class="paw"></button>
+      <a href="index.html" class="brand" style="font-weight: bold; font-size: inherit;">Pet2Family</a>
+      <div class="options">
+        <a href="addPet.html" class="opt" style="font-size: inherit;">Add Pet</a>
+        <a href="adoptPet.html" class="opt" style="font-size: inherit;">Adopt Pet</a>
+        <a href="signup.html" class="opt" style="font-size: inherit;">Sign Up</a>
+      </div>
+    </div>
+    
+    <div class="full-width-image">
+        <img id="carouselImage" src="https://images.livemint.com/img/2023/01/19/1140x641/puppy_adoption_unsplash_1674117666061_1674117687298_1674117687298.jpg" alt="Carousel Image">
+    </div>
+    <div class="container">
+        <h1>Pet Parent's Details</h1>
+        <h3>Please fill this information. It will help us to know about you.</h3>
+        <br>
+        <form>
+            <form>
+                <div class="form-group">
+                    <label for="owner-name">Owner Name:</label>
+                    <input type="text" id="owner-name" name="owner-name" placeholder="Enter Owner Name">
+                </div>
+                <div class="form-group">
+                    <label for="contact-number">Contact Number:</label>
+                    <input type="tel" id="contact-number" name="contact-number" placeholder="Enter Contact Number">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender *</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="state">Select State *</label>
+                    <input type="text" id="state" name="state" required>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="city">City *</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+            <div class="form-row">
+                <label>Are you a Pet Parent ? *</label>
+                <br>
+                <div class="radio-group">
+                    <input type="radio" id="yes" name="petParent" value="yes" required>
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="petParent" value="no" required>
+                    <label for="no">No</label>
+                </div>
+            </div>
+            <button type="submit" class="book-now-btn">Book Now</button>
+        </form>
+
+    </div>
+    
+    
+
+  <section id="signup">
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h2>Pet2Family</h2>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Brand Center</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h2>Help Center</h2>
+                <ul>
+                    <li><a href="#">Discord Server</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h2>Legal</h2>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Licensing</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h2>Download</h2>
+                <ul>
+                    <li><a href="#">iOS</a></li>
+                    <li><a href="#">Android</a></li>
+                    <li><a href="#">Windows</a></li>
+                    <li><a href="#">MacOS</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2024 <a href="#">Pet2Family</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+  </section>
+  <script>
+    function playRandomSound() {
+    var randomNumber = Math.floor(Math.random() * 3) + 1; // Generate a random number between 1 and 3
+    var audio = document.getElementById("pawSound" + randomNumber);
+    audio.play();
+  }
+  </script>
+  <script src="./js/bookpet.js"></script>
+</body>
+</html>
